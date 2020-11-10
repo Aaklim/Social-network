@@ -5,6 +5,7 @@
   display: inline-block;
 
   input{
+    width:180px;
     margin-bottom:20px;
     padding: 5px 10px;
     border:2px solid $twitterColor;
@@ -14,7 +15,7 @@
       outline: none;
     }
     &::placeholder{
-      padding-left: 5%;
+      padding-left: 5px;
     }
 
   }

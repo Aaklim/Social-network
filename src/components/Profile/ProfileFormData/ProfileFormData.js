@@ -4,19 +4,14 @@ import { reduxForm, Field } from 'redux-form';
 import { Input } from '../../ValidateComonents/Input';
 import { required, maxLengthInput } from '../../Controls/Controls';
 import Button from '../../Button/Button';
+import user from '../../../image/user.png';
 
 const ProfileFormData = (props) => {
   return (
     <React.Fragment>
       <form onSubmit={props.handleSubmit} className={styles.descriptionBlock}>
         <div className={styles.imageSection}>
-          <img
-            src={
-              props.profile.photos.large ||
-              'https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png'
-            }
-            alt='User'
-          />
+          <img src={props.profile.photos.large || user} alt='User' />
           {props.match.params.userID === undefined && (
             <input
               type='file'
@@ -26,7 +21,6 @@ const ProfileFormData = (props) => {
           )}
         </div>
 
-        {props.error ? <div style={{ color: 'red' }}>{props.error}</div> : null}
         <div className={styles.profileItems}>
           <div className={styles.fullName}>{props.profile.fullName}</div>
           <ul>
@@ -38,6 +32,7 @@ const ProfileFormData = (props) => {
                   component={Input}
                   placeholder='aboutMe'
                   validate={[required, maxLengthInput]}
+                  className={styles.firstInput}
                 />
               </div>
             </li>
@@ -49,15 +44,21 @@ const ProfileFormData = (props) => {
                   name='lookingForAJob'
                   component={Input}
                   type='checkbox'
+                  className={styles.lookingForAjob}
                 />
               </div>
             </li>
             <li>
               <div>
-                <div className={styles.title}>Contacts:</div>
+                <div className={styles.title}>
+                  Contacts:{' '}
+                  {props.error ? (
+                    <span style={{ color: 'red' }}>{props.error}</span>
+                  ) : null}
+                </div>
                 <div className={styles.contacts}>
                   <div>
-                    <div className={styles.titleGithub}>Github:</div>
+                    <div className={styles.titleGithub}>github:</div>
                     <Field
                       name='contacts.github'
                       component={Input}
@@ -66,7 +67,7 @@ const ProfileFormData = (props) => {
                     />
                   </div>
                   <div>
-                    <div className={styles.title}>Mainlink:</div>
+                    <div className={styles.title}>mainlink:</div>
                     <Field
                       name='contacts.mainLink'
                       component={Input}
