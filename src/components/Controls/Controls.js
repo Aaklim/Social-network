@@ -8,6 +8,6 @@ export const maxLengthTextArea = (value) => {
   return undefined;
 };
 export const maxLengthInput = (value) => {
-  if (value.length > 49) return 'Max length is 50';
+  if (value.length > 139) return 'Max length is 140';
   return undefined;
 };
