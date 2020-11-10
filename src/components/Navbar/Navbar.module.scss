@@ -1,0 +1,36 @@
+@import '../../assets/colors';
+@import '../../assets/box-shadow';
+
+.nav {
+  @include box-shadow($shadowColor);
+  min-width: 120px;
+  width: 15%;
+  padding-top: 2%;
+
+  .item {
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 10%;
+      font-weight: bold;
+      font-family: 'Roboto';
+      font-size: 1.25rem;
+      color: $fontColor;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      &:hover {
+        color: $bgcolorWhite;
+        background-color: $bgColorHover;
+      }
+      &.active {
+        color: $сolorActive;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+}

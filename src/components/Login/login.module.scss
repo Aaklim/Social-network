@@ -1,0 +1,47 @@
+@import '../../assets/colors';
+
+.main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    margin: 15px;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .commonError {
+    top: 89px;
+    position: absolute;
+    color: $errorColor;
+  }
+  .captcha {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid $twitterColor;
+    image {
+      width: 50px;
+    }
+  }
+  .freeAccount {
+    border: 1px solid $twitterColor;
+    padding: 5px;
+    div {
+      padding: 5px;
+      span {
+        font-weight: bolder;
+      }
+      &:first-child {
+        text-align: center;
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+  }
+}

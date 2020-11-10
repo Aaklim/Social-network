@@ -1,0 +1,39 @@
+@import '../../assets/colors';
+@import '../../assets/box-shadow';
+.wrapper {
+  position:relative;
+  display: inline-block;
+
+  input{
+    margin-bottom:20px;
+    padding: 5px 10px;
+    border:2px solid $twitterColor;
+    border-radius: 10px;
+    &:focus{
+      @include box-shadow($twitterColor);
+      outline: none;
+    }
+    &::placeholder{
+      padding-left: 5%;
+    }
+
+  }
+  &.error {
+    input {
+      @include box-shadow($errorColor);
+      border: 2px solid $errorColor;
+      &:focus{
+         outline: none;
+      }
+
+    }
+
+  }
+  .error{
+    width:150px;
+    position:absolute;
+    top:-15px;
+    left:20px;
+    color:$errorColor;
+  }
+}

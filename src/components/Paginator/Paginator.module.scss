@@ -1,0 +1,54 @@
+@import '../../assets/colors';
+
+.wrapper{
+    position:sticky;
+    top:0;
+    left:0;
+    padding:10px;
+
+    display:flex;
+    align-items: center;
+    width:100%;
+    height: 50px;
+    background-color: $bgcolorWhite;
+    .checkbox{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2%;
+        width:80px;
+        font-weight: bold;
+    }
+    .selected {
+        font-weight: bold;
+        background-color: $сolorActive;
+    }
+    .item{
+        width:35px;
+        height:22px;
+        text-align: center;
+        display: inline-block;
+        border:2px solid $shadowColor;
+        margin:2px;
+        padding:2px;
+        &:hover{
+            background-color: $bgColorHover;
+        }
+    }
+    .button{
+        width:35px;
+        height:22px;
+        border:2px solid $colorButtonHover;
+        background-color: $shadowColor;
+        &:hover{
+            background-color: $bgColorHover ;
+        }
+        &:active{
+            background-color: $bgcolorWhite;
+            outline: none;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+}

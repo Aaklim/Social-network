@@ -1,0 +1,50 @@
+@import '../../assets/colors';
+@import '../../assets/box-shadow';
+.drawer{
+    opacity: 0;
+    position: fixed;
+    top:0;
+    left:0;
+    width:160px;
+    transform:translateX(-160px);
+    height: 100vh;
+    z-index: 100;
+    background-color: $bgcolorWhite;
+    transition: all 0.2s ease-in ;
+    overflow: none;
+    .nav{
+        width:100%;
+        padding-top: 10%;
+        background-color: $bgColorHoverTransparent;
+        .item{
+            border-bottom: 2px solid $bgColorHover;
+            &:first-child{
+                border-top: 2px solid $bgColorHover;
+            }
+            a {
+                display: inline-block;
+                width:100%;
+                padding: 10%;
+                font-weight: bold;
+                font-family: 'Roboto';
+                font-size: 1.5rem;
+                color: $fontColor;
+                text-decoration: none;
+                transition: all 0.2s ease;
+                &:hover {
+                color: $bgcolorWhite;
+                background-color: $bgColorHover;
+
+              }
+               &.active {
+                  color: $сolorActive;
+                }
+              }
+        }
+    }
+
+}
+.isOpen{
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -1,0 +1,51 @@
+@import '../../../../assets/colors';
+@import '../../../../assets/box-shadow';
+.wrapper {
+  display: flex;
+  width:100%;
+  margin-bottom: 5%;
+  padding: 5px;
+
+
+  .imageSection {
+    margin-right: 1%;
+    img {
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid $twitterColor;
+    }
+  }
+  .messageSection {
+    @include box-shadow($bgColorHover);
+    display:flex;
+    flex-shrink: 2;
+    width:100%;
+    flex-direction: column;
+    padding:1%;
+    border: 1px solid $twitterColor;
+    &:hover{
+      background-color: $bgColorHoverTransparent;
+
+    }
+
+    .fullName{
+		font-weight: bold;
+	}
+    .message {
+
+      padding: 1%;
+      width: 100%;
+      overflow-wrap: break-word;
+      font-size:medium;
+      font-style:italic;
+
+    }
+    .likes{
+      display: inline-block;
+      font-size: smaller;
+      &::before{
+        content:'\1F44D';
+      }
+    }
+  }
+}

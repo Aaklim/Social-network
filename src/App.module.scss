@@ -1,0 +1,30 @@
+@import './assets/colors';
+@import './assets/box-shadow';
+
+
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	width:100%;
+	max-width: 800px;
+    height:100vh;
+	margin: 0 auto;
+	.wrapper {
+	  display:flex;
+	  flex-wrap: nowrap;
+	  width:100%;
+	  min-height:calc(100vh - 70px);
+		.content{
+			@include box-shadow($shadowColor);
+			position:relative;
+			width:calc(100% - 120px);
+			min-height:calc(100vh - 220px);
+			overflow-y:auto;
+			flex-grow: 1;
+
+
+		}
+	}
+}

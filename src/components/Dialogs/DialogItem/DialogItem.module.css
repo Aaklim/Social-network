@@ -1,0 +1,13 @@
+.dialogsitems {
+	grid-area: d;
+	background-color: rgb(148, 38, 199);
+
+	};
+	
+	 .dialog {
+		color:white;
+		text-decoration: none;
+	};
+	.active {
+		color:gold;
+	}

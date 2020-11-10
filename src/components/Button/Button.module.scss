@@ -1,0 +1,24 @@
+@import '../../assets/colors';
+.button{
+   padding-left:1rem;
+   padding-right:1rem;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid $twitterColor;
+    outline: none;
+    font-weight: bold;
+    color:$сolorActive;
+    background-color:$bgcolorWhite ;
+    transition: all 0.5s ease;
+    &:hover{
+     background-color:$colorButtonHover;
+    }
+    &:active{
+        outline: none;
+    }
+    &:disabled{
+        background-color: $bgColorHoverTransparent;
+    }
+}

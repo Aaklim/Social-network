@@ -1,0 +1,38 @@
+@import '../../assets/box-shadow';
+@import '../../assets/colors';
+
+.wrapper{
+    position:relative;
+    display: inline-block;
+    &.error{
+        textarea{
+            border:2px solid $errorColor ;
+            &:focus{
+                outline: none;
+                @include box-shadow($errorColor)
+            }
+        }
+        ::placeholder{
+
+            opacity: 0.5;
+
+        }
+    }
+    textarea{
+        border:2px solid $twitterColor;
+        &:focus{
+            outline: none;
+            @include box-shadow($twitterColor)
+        }
+        &::placeholder{
+            text-align: center;
+        }
+
+}
+.error{
+    position: absolute;
+    top:-15px;
+    left:5px;
+    color:$errorColor;
+}
+}

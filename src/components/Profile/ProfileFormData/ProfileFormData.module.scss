@@ -1,0 +1,55 @@
+@import '../ProfileInfo/ProfileInfo.module.scss';
+@import '../../../assets/colors';
+.descriptionBlock{
+.imageSection{
+  font-family: Roboto, cursive;
+}
+.titleAboutMe{
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 9px;
+  margin-bottom: 10px;
+}
+.titleGithub {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+.contacts {
+  padding-left: 15px;
+
+  .title {
+    font-weight: 600;
+  }
+}
+}
+.inputFile {
+  width: 140px;
+  margin-top: 13px;
+  outline: none;
+  &:before {
+    margin-right: 12px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    content: 'Download image';
+    display: inline-block;
+    border-radius: 15px;
+    border: 2px solid $twitterColor;
+    font-weight: bold;
+    color: $сolorActive;
+    transition: all 0.5s ease;
+  }
+  &:hover:before {
+    background-color: $colorButtonHover;
+    cursor: pointer;
+  }
+  &:hover:active {
+    outline: none;
+  }
+}
+.button {
+  text-align: center;
+}
