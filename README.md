@@ -1,3 +1,7 @@
+##
+This project is the result of learning React/Redux by legendary course "React JS-путь самурая 1.0" from it-kamasutra.com.
+Social-network is fully responsive application.Data is stored remotely on the server through client-server interactions (REST API).After registration in https://social-network.samuraijs.com/ throw this application you can create your own profile, fetch other users , follow/unfollow them ,watch there profiles.
+React,React(hooks),Sass(SCSS),react-router-dom,react-redux,Redux,redux-thunk,redux-form,Axios.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
