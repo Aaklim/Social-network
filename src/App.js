@@ -29,9 +29,9 @@ class App extends Component {
   }
 
   render() {
-    // if (!this.props.initialized) {
-    //   return <Loader />;
-    // }
+    if (!this.props.initialized) {
+      return <Loader />;
+    }
 
     return (
       <div className={styles.container}>
